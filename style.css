@@ -463,11 +463,11 @@ span {
 }
 
 .skills .container {
-    background: #0492de46;
+    background: #97909046;
     color: var(--text-color);
     border-radius: 1rem;
     padding: 2rem; /* Reduce padding */
-    width: 70%; /* Reduce width */
+    width: 80%; /* Reduce width */
     margin: auto;
     margin-top: 2rem;
     cursor: pointer;
