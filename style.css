@@ -458,55 +458,70 @@ span {
 
 
 /*skills section*/
-
-
-
-
- 
 .skills {
-    background-color: #150808;
-    padding: 20px;
-    text-align: center;
-}
-
-.skills .heading {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 20px;
+    background: var(--bg-color);
 }
 
 .skills .container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    background: #0492de46;
+    color: var(--text-color);
+    border-radius: 1rem;
+    padding: 2rem; /* Reduce padding */
+    width: 70%; /* Reduce width */
+    margin: auto;
+    margin-top: 2rem;
+    cursor: pointer;
 }
 
-.skills .bar {
-    width: 100%;
-    max-width: 300px;
-    margin: 10px;
-    background-color: #ffffff;
-    border: 1px solid #e0e0e0;
-    border-radius: 5px;
-    overflow: hidden;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+.skills .container .row {
+    display: grid;
+    flex-wrap: wrap; /* Ensure items wrap */
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1.8rem;
 }
 
-.skills .info {
-    display: flex;
-    align-items: center;
+.skills .container .bar {
+    margin-bottom: 15px;
     padding: 10px;
+    border-radius: 1rem; /* Reduce border radius */
+    background: var(--bg-color);
+    box-shadow: 0 4px 10px var(--main-color);
+    transition: box-shadow 0.3s ease, transform 0.3s ease; /* Combine transitions */
 }
 
-.skills img {
-    width: 30px;
-    height: 30px;
-    margin-right: 10px;
+.skills .container .bar:hover {
+    box-shadow: 0 4px 10px var(--main-color);
+    transform: scale(1.1); /* Adjust scale on hover */
 }
 
-.skills span {
-    font-size: 16px;
-    font-weight: bold;
+.skills .container .bar .info {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Align items horizontally */
+    justify-content: flex-end; /* Align items to the bottom */
+    height: 100%; /* Ensure the container takes up full height */
+}
+
+.skills .container .bar .info span {
+    font-size: 1.7rem;
+    font-weight: 500;
+}
+
+@media screen and (max-width:800px) {
+    .skills .container {
+        margin: 0;
+        padding: 0;
+    }
+    .skills .container .row {
+        grid-template-columns: repeat(2, 1fr);
+        margin: 1rem;
+        padding: 2reem 0.2rem 2rem 0.2rem;
+        gap: 1rem;
+    }
+    .skills .container {
+        margin-top: 5px;
+        width: 100%;
+    }
 }
 
 /*Education section*/
